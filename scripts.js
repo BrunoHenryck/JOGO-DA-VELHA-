@@ -6,6 +6,8 @@ const winningMessageTextElement = document.querySelector(
 const winningMessage = document.querySelector("[data-winning-message]");
 const restartButton = document.querySelector("[data-restart-button]");
 
+
+
 let isCircleTurn;
 
 const winningCombinations = [
@@ -38,7 +40,7 @@ const endGame = (isDraw) => {
         winningMessageTextElement.innerText = "Empate!";
     } else {
         winningMessageTextElement.innerText = isCircleTurn
-            ? "O Venceu!"
+            ? " O Venceu!"
             : "X Venceu!";
     }
 
@@ -103,6 +105,10 @@ const handleClick = (e) => {
     }
 };
 
+
 startGame();
 
 restartButton.addEventListener("click", startGame);
+
+const startButton = document.querySelector("[data-start-button]");
+startButton.addEventListener("click", startGame);
